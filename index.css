@@ -1,0 +1,166 @@
+  
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.checkbtn{
+    color: white;
+    font-size: 20px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+}
+#check{
+    display: none;
+}
+nav{
+    display: flex;
+    
+    justify-content: space-between;
+    background-color: rgb(5, 5, 5);
+    height: 60px;
+    align-items: center;
+    padding: 0 100px 0 50px;
+}
+nav h1{
+    color: rgb(247, 243, 243);
+    font-size: 40px;
+    font-weight: bold;
+    font-family: dancing script;
+}
+
+nav ul{
+    display: flex;
+}
+nav ul li{
+    position: relative;
+
+    margin-left: 40px;
+    list-style-type: none;
+}
+nav ul li a{
+    position: relative;
+    text-decoration: none;
+    color: rgb(224, 125, 125);
+    font-size: 25px;
+}
+nav ul li a:hover{
+    color: white;
+    font-weight: 800;
+}
+.drop-down{
+    display: none;
+}
+ nav ul li:hover .drop-down {
+color: rgb(224, 125, 125);;
+    display: block;
+    position: absolute;
+    left: 0;
+    top:100%;
+    background-color: rgb(114, 102, 102);
+    padding: 10px 10px;
+    font-size: 20px;
+    transition: .3s linear;
+}
+
+nav ul li .drop-down ul li :hover{
+    color: white;
+}
+nav ul li .drop-down ul{
+    display: block;
+    /* margin: 10px; */
+}
+.drop-down ul li{
+    width: 100px;
+  
+}
+.overlay{
+    height: 100vh;
+    background-image: url(https://images.herzindagi.info/image/2024/Apr/water-rich-fruits-for-summer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}.overlay p{
+    margin-top: 20px;
+  font-family: dancing script;
+  font-weight: 800;
+   color: rgb(235, 116, 116);
+}
+@media screen and (max-width:900px){
+    nav h1{
+        font-size: 20px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    .overlay{
+        height:50vh;
+        width: 100%;
+        background-size: cover;
+    }
+    .overlay p{
+        font-size:20px ;
+    }
+}
+@media screen and (max-width:700px){
+    .checkbtn{
+        display: block;
+    }
+    nav{
+        padding: 10px 10px;
+    }
+    nav h1{
+        font-size: 20px;
+    }
+   
+    nav ul{
+        position: fixed;
+        display: block;
+        font-size: 10px;
+        width: 100%;
+        padding: 10px;
+        min-height: 10px;
+        margin-top: 50px;
+        top: -100%;
+        left: 0;
+        text-align: center;
+        background-color: rgb(80, 75, 75);
+       transition: top .8s;
+    }
+    #check:checked~ul{
+        top: 0px;
+    }
+    nav ul li{
+        margin: 10px;
+    }
+    .overlay{
+        height:70vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+    .overlay p{
+        font-size:25px ;
+        /* margin-left:-60px; */
+        text-align: center;
+    }
+    nav ul li:hover .drop-down {
+       position: absolute;
+        width:30%;
+         left : 250px;
+         top:-50px;
+        background-color: rgb(90, 89, 89);
+    }
+    nav ul li:hover .drop-down li a{
+        display:block;
+    }
+    
+  
+}
